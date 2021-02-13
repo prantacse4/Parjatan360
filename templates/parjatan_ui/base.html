@@ -14,6 +14,7 @@
 {% endblock extracsscdn %}
     
 <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" >
 <title>
 {% block title %}
@@ -22,10 +23,38 @@
     </title>
 </head>
 <body>
+
+<nav class="my_navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#" class="logo">Parjatan360</a>
+            </div>
+            <div class="col-md-8 text-center">
+                <ul class="nav_ul">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Available Tours</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-2">
+                <a href="#" class="tex-right">Sign In</a>
+            </div>
+        </div>
+    </div>
+</nav>
     
-    {% block nav %}
-        
-    {% endblock nav %}
+
     
 
 
