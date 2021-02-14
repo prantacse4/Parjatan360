@@ -66,12 +66,12 @@ justify-content: center;
 /* ---- particles.js container ---- */
 .intro{
     position: relative;
-    height: 50vh;
+    height: 70vh;
 }
 #particles-js{
     width: 100%;
     height: 100%;
-    background: linear-gradient(#fff, #23232359);
+    background: linear-gradient(#fff, #23232369);
     opacity: 1;
     position: absolute;
   }
@@ -89,3 +89,33 @@ justify-content: center;
   canvas{
     display:block;
   }  
+
+
+  .my_button {
+    font-family: var(--engfont);
+    font-size: 1.0rem;
+    border-radius: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background: var(--bg);
+    padding: .3rem 1.4rem;
+    color: white;
+}
+  .my_button:hover{
+      background: var(--btn);
+      transition: all ease 0.3s;
+      color: white;
+  }
+  .divbutton{
+    text-align: end;
+  }
+  .navigation{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .d-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
