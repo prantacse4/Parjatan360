@@ -1,20 +1,27 @@
 {% extends 'parjatan_ui/base.html' %}
 
 {% load static %}
+
+
+{% block extracsscdn %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock extracsscdn %}
+  
+
 {% block title %}
-    Parjatan360
+Parjatan360
 {% endblock title %}
 
 
-    
+
 
 
 
 
 {% block studentactive %}
-    active
+active
 {% endblock studentactive %}
-    
+
 
 {% block body %}
 <div class="intro">
@@ -22,15 +29,415 @@
 
   <div id="particles-js">
   </div>
+
+
+
+<div class="container">
+  <div class="maindivbox">
+    <div class="introheader">
+      <h5>Life is Beautiful | Live the life fullest</h5>
+    </div>
+    <div class="introabout">
+      <h5>Welcome to <span>parjatan360</span></h5>
+    </div>
+
+    <div class="packagesbtn">
+      <a href="#">packages <i class="fas fa-box"></i></a>
+      <a href="#">Resorts <i class="fas fa-hotel"></i></a>
+      <a href="#">Tours <i class="fas fa-globe-asia"></i></a>
+      <a href="#">Cars <i class="fas fa-car"></i></a>
+    </div>
+
+
+    <section class="section_2">
+      <div class="container p-0">
+        <div class="search_tours">
+          <div class="row search_tours_forms">
+            <div class="col-md-4 ">
+                <label class="form-control-label">Location</label>
+                <input type="text" class="form-control">
+              
+            </div>
+            <div class="col-md-2">
+              <label class="form-control-label">Budget</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-md-2">
+              <label class="form-control-label">Check in</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-2">
+              <label class="form-control-label">Check out</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-2">
+              <div class="searchdiv">
+                <label class="form-control-label">&nbsp;</label>
+              <button class="btn btn-success">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 </div>
 
 
-    <br><br>
 
-        <!-- --------------------------------------------- -->
-            <!-- PAGINATION -->
-        <!-- --------------------------------------------- -->
-        <!-- {% if project.paginator.num_pages > 1 %}
+<section class="most_visited_section">
+  <div class="container">
+    <div class="most_visited">
+
+      <div class="mt_header">
+        <h5>Most Visited Spots</h5>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card card1">
+            <a href="#">
+            <div class="image_card_div">
+              <img src="{% static 'img/image.jpg' %}" alt="">
+            </div>
+            <div class="card_header">
+              <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
+              <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+              <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
+            </div>
+          </a>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card1">
+          <a href="#">
+          <div class="image_card_div">
+            <img src="{% static 'img/image.jpg' %}" alt="">
+          </div>
+          <div class="card_header">
+            <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
+            <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+            <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
+          </div>
+        </a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card card1">
+        <a href="#">
+        <div class="image_card_div">
+          <img src="{% static 'img/image.jpg' %}" alt="">
+        </div>
+        <div class="card_header">
+          <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
+          <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+          <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
+        </div>
+      </a>
+      </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card card1">
+      <a href="#">
+      <div class="image_card_div">
+        <img src="{% static 'img/image.jpg' %}" alt="">
+      </div>
+      <div class="card_header">
+        <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
+        <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+        <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
+      </div>
+    </a>
+    </div>
+</div>
+
+
+    </div>
+
+    <div class="big_button">
+      <a href="#">All Packages</a>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="top_rated_resorts">
+  <div class="container">
+    <div class="mt_header">
+      <h5>Top Rated Resorts</h5>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card card1">
+          <a href="#">
+          <div class="image_card_div">
+            <img src="{% static 'img/image.jpg' %}" alt="">
+          </div>
+          <div class="card_header">
+            <h5><i class="fas fa-place-of-worship"></i> Meghaloya</h5>
+            <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+            <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+          </div>
+        </a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card card1">
+        <a href="#">
+        <div class="image_card_div">
+          <img src="{% static 'img/image.jpg' %}" alt="">
+        </div>
+        <div class="card_header">
+          <h5><i class="fas fa-place-of-worship"></i> Meghaloya</h5>
+          <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
+          <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+        </div>
+      </a>
+      </div>
+  </div>
+
+
+    </div>
+
+    <div class="big_button">
+      <a href="#">All Resorts</a>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<section class="our_services">
+  <div class="container">
+    <div class="mt_header">
+      <h5>Our Services</h5>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card card2">
+          <h5 class="hash">#</h5>
+          <h5 class="service_header">Information Gathering</h5>
+          <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card card2">
+        <h5 class="hash">#</h5>
+        <h5 class="service_header">Information Gathering</h5>
+        <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card card2">
+      <h5 class="hash">#</h5>
+      <h5 class="service_header">Information Gathering</h5>
+      <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+    </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card card2">
+    <h5 class="hash">#</h5>
+    <h5 class="service_header">Information Gathering</h5>
+    <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+  </div>
+</div>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+</section>
+
+
+
+<section class="top_rated_resorts">
+  <div class="container">
+    <div class="mt_header">
+      <h5>Travel Blogs</h5>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card card2 card3">
+
+          <div class="row">
+            <div class="col-md-3 card1img">
+                <img src="{% static 'img/image.jpg' %}" alt="">
+            </div>
+            <div class="col-md-9">
+              <h5 class="hash hash2">#UNCATEGORY</h5>
+              <h5 class="service_header">There's Something new in Sajek</h5>
+              <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+            </div>
+          </div>
+
+        </div>
+        
+    </div>
+
+    <div class="col-md-6">
+      <div class="card card2 card3">
+
+        <div class="row">
+          <div class="col-md-3 card1img">
+              <img src="{% static 'img/image.jpg' %}" alt="">
+          </div>
+          <div class="col-md-9">
+            <h5 class="hash hash2">#UNCATEGORY</h5>
+            <h5 class="service_header">There's Something new in Sajek</h5>
+            <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+          </div>
+        </div>
+
+      </div>
+      
+  </div>
+
+  <div class="col-md-6">
+    <div class="card card2 card3">
+
+      <div class="row">
+        <div class="col-md-3 card1img">
+            <img src="{% static 'img/image.jpg' %}" alt="">
+        </div>
+        <div class="col-md-9">
+          <h5 class="hash hash2">#UNCATEGORY</h5>
+          <h5 class="service_header">There's Something new in Sajek</h5>
+          <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+        </div>
+      </div>
+
+    </div>
+    
+</div>
+
+<div class="col-md-6">
+  <div class="card card2 card3">
+
+    <div class="row">
+      <div class="col-md-3 card1img">
+          <img src="{% static 'img/image.jpg' %}" alt="">
+      </div>
+      <div class="col-md-9">
+        <h5 class="hash hash2">#UNCATEGORY</h5>
+        <h5 class="service_header">There's Something new in Sajek</h5>
+        <p class="service_desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h6><i class="fas fa-heart text-danger"></i> 28 Loved</h6>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+
+
+
+    </div>
+
+    <div class="big_button">
+      <a href="#">All Blogs</a>
+    </div>
+
+
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container footer_container">
+    <div class="row">
+      <div class="col-md-3 fbody">
+        <div class="flogo">
+          <h5>Parjatan360</h5>
+        </div>
+        <div class="fabout">
+          <p>Life is beautiful, live the life fullest</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+
+        <div class="footerlinks">
+          <div class="flinkgeader">
+            <h5>Quick Links</h5>
+            <hr>
+          </div>
+          <div class="flinks">
+            <a href="#">Car Contacts</a>
+            <a href="#">Services</a>
+            <a href="#">Search</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="footerlinks">
+          <div class="flinkgeader">
+            <h5>Resources</h5>
+            <hr>
+          </div>
+          <div class="flinks">
+            <a href="#">Packages</a>
+            <a href="#">Resorts</a>
+            <a href="#">Blogs</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footerlinks">
+          <div class="flinkgeader">
+            <h5>Signin As</h5>
+            <hr>
+          </div>
+          <div class="flinks">
+            <a href="#">Tour Arranger</a>
+            <a href="#">Resorts Manager</a>
+            <a href="#">Car Driver</a>
+            <a href="#">Blogger</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyrights">
+    <div class=" container copyright text-center">
+      <h6>@ <span id="year"></span> Developed By : <a href="https://www.facebook.com/angrypranta/">Pranta Kumar Biswas</a></h6>
+  </div>
+  </div>
+</section>
+<br><br>
+
+<!-- --------------------------------------------- -->
+<!-- PAGINATION -->
+<!-- --------------------------------------------- -->
+<!-- {% if project.paginator.num_pages > 1 %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if project.paginator.num_pages != 1 %}
@@ -63,150 +470,48 @@
             </ul>
         </nav>
         {% endif %} -->
-                <!-- --------------------------------------------- -->
-            <!-- PAGINATION -->
-        <!-- --------------------------------------------- -->
-            
+<!-- --------------------------------------------- -->
+<!-- PAGINATION -->
+<!-- --------------------------------------------- -->
+
 
 
 
 
 {% endblock body %}
 
-    
+
 
 {% block extrajscdn %}
-    <script src="{% static 'js/particles.js' %}"></script>
-    <script src="{% static 'js/particle_app.js' %}"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/particle_app.js' %}"></script>
 {% endblock extrajscdn %}
-    
+
 
 {% block scripts %}
 
-    <script>
-    // Form Resubmission Stop Query 
-        $(document).ready(function(){
-        window.history.replaceState('','',window.location.href)
-        });
- </script>
- <script>
-     
-particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 150,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
+<script>
+  // Form Resubmission Stop Query 
+  $(document).ready(function () {
+    window.history.replaceState('', '', window.location.href);
+
   });
-  
-  requestAnimationFrame();
-  
-  
- </script>
- <!-- <script>
+
+
+
+
+var d = new Date();
+var n = d.getFullYear();
+document.getElementById("year").innerHTML = n;
+
+
+</script>
+<script>
+
+      
+
+</script>
+<!-- <script>
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -222,4 +527,3 @@ particlesJS("particles-js", {
     }
  </script> -->
 {% endblock scripts %}
-    
