@@ -17,3 +17,7 @@ from django.contrib.auth import authenticate, login, logout
 def parjatan_ui(request):
     diction = {}
     return render(request, 'parjatan_ui/index.html', context = diction)
+
+def login(request):
+    diction = {}
+    return render(request, 'parjatan_ui/login.html', context = diction)

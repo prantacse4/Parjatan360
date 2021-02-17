@@ -4,4 +4,5 @@ from parjatan_ui import views
 
 urlpatterns = [
     path('',views.parjatan_ui, name="parjatan_ui"),
+    path('login/',views.login, name="login"),
 ]
