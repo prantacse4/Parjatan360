@@ -21,3 +21,7 @@ def parjatan_ui(request):
 def login(request):
     diction = {}
     return render(request, 'parjatan_ui/login.html', context = diction)
+
+def signup(request):
+    diction = {}
+    return render(request, 'parjatan_ui/signup.html', context = diction)
