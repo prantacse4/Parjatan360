@@ -34,22 +34,33 @@ active
     <section class="login_section">
         <div class="login-wrap">
             <div class="login-html">
+
+
                 <label class="tab">SIGN IN</label>
 
                 <div class="login-form">
                     <div class="sign-in-htm">
+
+
+                      <form action="" method="POST">
+                        {% csrf_token %}
                         <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">Username</label>
+                            <input  type="text" class="input" name="username" required>
                         </div>
                         <div class="group">
-                            <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <label  class="label">Password</label>
+                            <input  type="password" class="input" data-type="password" name="password" required>
                         </div>
                         
                         <div class="group">
                             <input type="submit" class="button" value="Sign In">
                         </div>
+                      </form>
+
+
+
+
                         <div class="hr"></div>
                         <div class="foot-lnk">
                             <a href="#forgot">Signup</a>
@@ -57,6 +68,8 @@ active
                         <div class="foot-lnk">
                             <a href="#forgot">Forgot Password?</a>
                         </div>
+
+
                     </div>
 
                 </div>
