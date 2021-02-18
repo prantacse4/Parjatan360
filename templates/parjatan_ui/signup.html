@@ -48,9 +48,30 @@ active
                     <option value="blogger">Blogger</option>
                 </select>
 
-                <div class="diverror">
-                    <h5>hi</h5>
-                </div>
+                  
+                  {% if myform.errors.username %}
+                  <div class="diverror">
+                    <h5>Username already taken</h5>
+                  </div>
+                    {% endif %}
+                  
+                  {% if myform.errors.email %}
+                  <div class="diverror">
+                    <h5>Email already registered</h5>
+                  </div>
+                    {% endif %}
+                  
+                  {% if myform.errors.password1 %}
+                  <div class="diverror">
+                    <h5>{{myform.errors.password1}}</h5>
+                  </div>
+                    {% endif %}
+                  
+                  {% if myform.errors.password2 %}
+                  <div class="diverror">
+                    <h5>Password not matched</h5>
+                  </div>
+                    {% endif %}
 
                 <div class="login-form">
                     <div class="sign-in-htm">
