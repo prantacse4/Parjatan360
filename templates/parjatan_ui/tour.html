@@ -1,0 +1,214 @@
+{% extends 'parjatan_ui/base.html' %}
+
+{% load static %}
+
+
+{% block extracsscdn %}
+<link rel="stylesheet" href="{% static 'css/slickslider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tour.css' %}">
+{% endblock extracsscdn %}
+  
+
+{% block title %}
+Parjatan360
+{% endblock title %}
+
+
+
+
+
+
+
+{% block studentactive %}
+active
+{% endblock studentactive %}
+
+
+{% block body %}
+
+
+
+<section class="tour_section">
+    <div class="container tour_section_container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="slider">
+                    <!-- SLICK SLIDER  -->
+                    <!-- Slider One -->
+                    <section class="slicksliderexample" id="slick_slider">
+                        <div class="site_slider">
+                            <div class="slider_one">
+                                <div class="slicks slick_s1">
+                                    <h1 class="text-center text-white pt-5">Hi,</h1>
+                                </div>
+                                <div class="slicks slick_s2">
+                                    <h1 class="text-center text-white pt-5">This</h1>
+                                </div>
+                                <div class="slicks slick_s3">
+                                    <h1 class="text-center text-white pt-5">is</h1>
+                                </div>
+                                <div class="slicks slick_s4">
+                                    <h1 class="text-center text-white pt-5">Made By</h1>
+                                </div>
+                                <div class="slicks slick_s5">
+                                    <h1 class="text-center text-white pt-5">PRANTA</h1>
+                                </div>
+                            </div>
+                            <div class="slider-btn">
+                                <span class="prev position-top"><i class="fas fa-chevron-left"></i></span>
+                                <span class="next position-top right-0"><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Slider One End -->
+                </div>
+
+                <div class="booking_options">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="total_costs">
+                                <h5>Total BDT</h5>
+                                <p>৳4,500 Taka</p>
+                                <button class="btn my_button2">BOOK NOW</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="b_option_h">Book now before it's too late</h5>
+                            <div class="row booking_details">
+                                <div class="col-md-4">
+                                    <h5>Date</h5>
+                                    <p>16 Feb, 2021</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Enter Members</h5>
+                                    <input type="number" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Price per member</h5>
+                                    <p>৳4,500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="tour_header">
+                    <div class="tour_heading">
+                        <h5>Sylhet to Coxbazar Tour</h5>
+                        <p><i class="fas fa-map-marker-alt text-success"></i> Cox's Bazar</p>
+                    </div>
+                    <div class="row tour_main_details">
+                        <div class="col-md-6">
+                            <h5>Tour Arranged By</h5>
+                            <p>Mr TOur</p>
+                            <h5>Budget</h5>
+                            <p>4,500 Per</p>
+                            <h5>Age Limit</h5>
+                            <p>18-40</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Total Member Needed</h5>
+                            <p>25</p>
+                            <h5>Available Member Seats</h5>
+                            <p>14</p>
+                            <h5>Tour Duration</h5>
+                            <p><i class="fas fa-sun text-warning"></i> 2 Days &nbsp; <i class="fas fa-moon text-info"></i>  3 Days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours_in_tour_search">
+                    <h5>Quick Search</h5>
+                    <div class="form_group">
+                        <form action="" method="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" name="search_tour" class="form-control" required placeholder="Search by Destination">
+                                    <input type="date" name="search_tour" class="form-control" required >
+                                </div>
+                                <div class="col-md-12">
+                                    <button class=" btn my_button2">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+{% endblock body %}
+
+
+
+{% block extrajscdn %}
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+{% endblock extrajscdn %}
+
+
+{% block scripts %}
+
+<script>
+  // Form Resubmission Stop Query 
+  $(document).ready(function () {
+    window.history.replaceState('', '', window.location.href);
+
+  });
+
+
+
+
+var d = new Date();
+var n = d.getFullYear();
+document.getElementById("year").innerHTML = n;
+
+
+</script>
+<script>
+
+      
+
+</script>
+<!-- <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+                    
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+ </script> -->
+{% endblock scripts %}

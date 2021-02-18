@@ -57,6 +57,7 @@ li,ul,h1,h2,h3,h4,h5,h6{
 
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
 <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" >
 <title>
 {% block title %}
@@ -71,6 +72,39 @@ li,ul,h1,h2,h3,h4,h5,h6{
 {% if user.is_authenticated %}
 
 
+<nav class="top_nav">
+    <div class="container my_top_nav">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="top_nav_ul">
+                    <li class="li1">
+                        <a href="#"><i class="far fa-envelope"></i> parjatan360@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Barishal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <ul class="top_nav_ul tnuli">
+                    <li class="li1">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout_user' %}"><i class="fas fa-power-off"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <nav class="my_navbar" id="#my_nav">
     <div class="container">
         <div class="row">
@@ -97,7 +131,7 @@ li,ul,h1,h2,h3,h4,h5,h6{
 
             </div>
             <div class="col-md-2">
-                <div class="divbutton">
+                <div class="divbuttonnav">
                     <a href="#" class="btn my_button" class="tex-right">Profile</a>
                 </div>
             </div>
@@ -110,6 +144,35 @@ li,ul,h1,h2,h3,h4,h5,h6{
 
 
 
+<nav class="top_nav">
+    <div class="container my_top_nav">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="top_nav_ul">
+                    <li class="li1">
+                        <a href="#"><i class="far fa-envelope"></i> parjatan360@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Barishal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <ul class="top_nav_ul tnuli">
+                    <li class="li1">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <nav class="my_navbar" id="#my_nav">
     <div class="container">
@@ -137,7 +200,7 @@ li,ul,h1,h2,h3,h4,h5,h6{
 
             </div>
             <div class="col-md-2">
-                <div class="divbutton">
+                <div class="divbuttonnav">
                     <a href="{% url 'userlogin' %}" class="btn my_button" class="tex-right">Sign In</a>
                 </div>
             </div>
@@ -150,77 +213,15 @@ li,ul,h1,h2,h3,h4,h5,h6{
     
 
 
-{% block body %}
-
 
     
-{% endblock body %}
+
+    
 
 
-<section class="footer">
-    <div class="footer_container">
-      <div class="row">
-        <div class="col-md-3 fbody">
-          <div class="flogo">
-            <h5>Parjatan360</h5>
-          </div>
-          <div class="fabout">
-            <p>Life is beautiful, live the life fullest</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-  
-          <div class="footerlinks">
-            <div class="flinkgeader">
-              <h5>Quick Links</h5>
-              <hr>
-            </div>
-            <div class="flinks">
-              <a href="#">Car Contacts</a>
-              <a href="#">Services</a>
-              <a href="#">Search</a>
-            </div>
-          </div>
-  
-        </div>
-        <div class="col-md-3">
-          <div class="footerlinks">
-            <div class="flinkgeader">
-              <h5>Resources</h5>
-              <hr>
-            </div>
-            <div class="flinks">
-              <a href="#">Packages</a>
-              <a href="#">Resorts</a>
-              <a href="#">Blogs</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footerlinks">
-            <div class="flinkgeader">
-              <h5>Signin As</h5>
-              <hr>
-            </div>
-            <div class="flinks">
-              <a href="#">Tour Arranger</a>
-              <a href="#">Resorts Manager</a>
-              <a href="#">Car Driver</a>
-              <a href="#">Blogger</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyrights">
-      <div class=" container copyright text-center">
-        <h6>@ <span id="year"></span> Developed By : <a href="https://www.facebook.com/angrypranta/">Pranta Kumar Biswas</a></h6>
-    </div>
-    </div>
-  </section>
-
-
-
+    {% block body %}
+        
+    {% endblock body %}
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="{% static 'js/jquery3.5.1.js' %}"></script>
 <script src="{% static 'js/bootstrap4.5.js' %}"></script>

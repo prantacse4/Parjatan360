@@ -183,3 +183,9 @@ def userlogin(request):
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+
+def tour(request):
+    diction = {}
+    return render(request, 'parjatan_ui/tour.html', context=diction)

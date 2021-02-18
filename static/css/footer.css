@@ -1,0 +1,57 @@
+
+
+.footer_container {
+    border-top: 3px solid var(--bg);
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    padding: 2rem 2rem;
+    margin-top: 5rem;
+    background: linear-gradient(to top, #ffffff, #41ce7f3d);
+}
+.fbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flogo{}
+.flogo h5 {
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+.fabout{}
+.fabout p{
+    text-align: center;
+}
+.footerlinks{}
+.flinkgeader{}
+.flinkgeader h5 {
+    font-weight: 600;
+    user-select: none;
+    color: var(--btn);
+}
+.flinkgeader hr {
+    width: 25%;
+    background: var(--bg);
+    height: .08rem;
+    border-radius: 3rem;
+    margin: .2rem 0rem;
+    margin-bottom: .4rem;
+}
+.flinks {
+    display: flex;
+    flex-direction: column;
+}
+.flinks a {
+    width: fit-content;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #a3a3a3;
+}
+.flinks a:hover{
+    color: var(--bg);
+    font-weight: 600;
+    transition: all ease .3s;
+}

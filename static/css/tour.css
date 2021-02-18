@@ -1,0 +1,134 @@
+.tour_section_container {
+    padding-top: 5rem;
+    max-width: 85% !important;
+}
+.tour_header{}
+.tour_heading {
+    background: var(--btnhover);
+    border-radius: .4rem;
+    padding: .4rem .7rem;
+    margin-bottom: .5rem;
+}
+.tour_heading h5 {
+    font-weight: 700;
+    color: var(--bg);
+    user-select: none;
+}
+.tour_heading p {
+    margin-top: .3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray);
+}
+.tour_heading i{
+    color: var(--gray)  !important;
+}
+
+.tour_main_details{
+    padding: .4rem .7rem;
+}
+.tour_main_details h5 {
+    font-family: var(--roboto);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+}
+.tour_main_details p {
+    font-family: var(--roboto);
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+}
+.tours_in_tour_search {
+    background: var(--btnhover);
+    padding: .6rem .6rem;
+    border-radius: .4rem;
+}
+.tours_in_tour_search h5 {
+    color: var(--bg);
+    font-size: 1.4rem;
+    font-family: var(--barlow);
+    margin-bottom: .5rem;
+}
+.tours_in_tour_search input {
+    margin-bottom: .6rem;
+    background: #ffffffa3;
+}
+.my_button2 {
+    font-family: var(--barlow);
+    font-size: 1.1rem;
+    border-radius: .4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: var(--bg);
+    padding: .3rem 1.4rem;
+    color: white;
+    margin: .5rem 0rem;
+}
+
+.my_button2:hover{
+    transition: all .3s ease;
+    color: white;
+    background: var(--darkcolor);
+}
+
+.booking_options {
+    background: var(--btnhover);
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+    margin: .7rem 0rem;
+}
+.booking_details{
+    font-family: var(--roboto);
+}
+.booking_details h5 {
+    margin-bottom: .4rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--btn);
+    text-transform: capitalize;
+}
+.booking_details p {
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.booking_details input{
+    background: none;
+    border: .09rem solid var(--btn);
+}
+.total_costs {
+    font-family: var(--barlow);
+    background: var(--btn);
+    border-radius: .4rem;
+    padding: .5rem;
+    color: white;
+    text-align: center;
+}
+.total_costs h5 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: .2rem;
+}
+.total_costs p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+.b_option_h {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: .6rem;
+    user-select: none;
+    background: var(--bg);
+    border-radius: .4rem;
+    padding: .4rem .4rem;
+    text-align: center;
+}
