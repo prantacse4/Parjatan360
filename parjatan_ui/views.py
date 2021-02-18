@@ -24,19 +24,9 @@ def login(request):
 
 
 def signup(request):
-    # if request.user.is_authenticated:
-    #     if request.user.is_teacher == True:
-    #         return redirect('multiauth_teacher')
-    #     elif request.user.is_student == True:
-    #         return redirect('multiauth_student')
-    #     elif request.user.is_superuser == True:
-    #         return  HttpResponseRedirect('/admin')
-
     myform = memberSignUpForm()
     if request.method == 'POST':
         myform = memberSignUpForm(request.POST)
-        
-
         if myform.is_valid():
             user_type = myform.cleaned_data['user_type']
             if user_type == 'member':
