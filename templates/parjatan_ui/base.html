@@ -65,6 +65,83 @@ li,ul,h1,h2,h3,h4,h5,h6{
 </head>
 <body data-spy="scroll">
 
+
+
+{% if user.is_authenticated %}
+
+
+<nav class="top_nav">
+    <div class="container my_top_nav">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="top_nav_ul">
+                    <li class="li1">
+                        <a href="#"><i class="far fa-envelope"></i> parjatan360@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Barishal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <ul class="top_nav_ul tnuli">
+                    <li class="li1">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout_user' %}"><i class="fas fa-power-off"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="my_navbar" id="#my_nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="{% url 'parjatan_ui' %}" class="logo">Parjatan360</a>
+            </div>
+            <div class="col-md-8 d-center">
+                <div class="navigation">
+                    <ul class="nav_ul">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Available Tours</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="divbutton">
+                    <a href="#" class="btn my_button" class="tex-right">Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+{% else %}
+
+
+
 <nav class="top_nav">
     <div class="container my_top_nav">
         <div class="row">
@@ -122,16 +199,19 @@ li,ul,h1,h2,h3,h4,h5,h6{
             </div>
             <div class="col-md-2">
                 <div class="divbutton">
-                    {% if user.is_authenticated %}
-                    <a class="btn my_button" href="{% url 'logout_user' %}">Logout</a>
-                    {% else %}
-                    <a href="#" class="btn my_button" class="tex-right">Sign In</a>
-                    {% endif %}
+                    <a href="{% url 'userlogin' %}" class="btn my_button" class="tex-right">Sign In</a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+
+{% endif %}
+    
+
+
+
     
 
     
