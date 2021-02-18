@@ -12,8 +12,8 @@ class User(AbstractUser):
 
 class member(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user_type = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     district = models.CharField(max_length=50)
     is_active = models.BooleanField(default = False)
@@ -23,8 +23,8 @@ class member(models.Model):
 
 class tour_arranger(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user_type = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     district = models.CharField(max_length=50)
     is_active = models.BooleanField(default = False)
@@ -33,8 +33,8 @@ class tour_arranger(models.Model):
 
 class resorts_manager(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user_type = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     district = models.CharField(max_length=50)
     is_active = models.BooleanField(default = False)
@@ -42,8 +42,8 @@ class resorts_manager(models.Model):
 
 class car_driver(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user_type = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     district = models.CharField(max_length=50)
     is_active = models.BooleanField(default = False)
@@ -51,8 +51,8 @@ class car_driver(models.Model):
 
 class blogger(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user_type = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     district = models.CharField(max_length=50)
     is_active = models.BooleanField(default = False)

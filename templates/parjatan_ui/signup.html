@@ -33,67 +33,77 @@ active
 
     <section class="login_section">
         <div class="login-wrap">
+
+          
             <div class="login-html">
                 <label class="tab">SIGN UP AS</label>
- 
-                <select>
-                    <option>Member</option>
-                    <option>Tour Arranger</option>
-                    <option>Car Driver</option>
-                    <option>Resort Manager</option>
+
+                <form method="POST">
+                  {% csrf_token %}
+                <select name="user_type">
+                    <option value="member">Member</option>
+                    <option value="tour_arranger">Tour Arranger</option>
+                    <option value="car_driver">Car Driver</option>
+                    <option value="resort_manager">Resort Manager</option>
+                    <option value="blogger">Blogger</option>
                 </select>
 
                 <div class="login-form">
                     <div class="sign-in-htm">
                         <div class="group">
-                            <label for="user" class="label">Name</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">Name</label>
+                            <input  type="text" class="input" name="name">
                         </div>
 
                         <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">Username</label>
+                            <input  type="text" class="input" name="username">
                         </div>
 
                         <div class="group">
-                            <label for="user" class="label">Email</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">Email</label>
+                            <input  type="email" name="email" class="input">
                         </div>
 
                         <div class="group">
-                            <label for="user" class="label">Phone</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">Phone</label>
+                            <input  type="text" name="phone" class="input">
                         </div>
 
                         <div class="group">
-                            <label for="user" class="label">District</label>
-                            <input id="user" type="text" class="input">
+                            <label  class="label">District</label>
+                            <input  type="text" name="district" class="input">
                         </div>
 
                         <div class="group">
                             <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <input  type="password" name="password1" class="input" data-type="password">
                         </div>
 
                         <div class="group">
                             <label for="pass" class="label">Confirm</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <input  type="password" class="input" name="password2" data-type="password">
                         </div>
                         
                         <div class="group">
                             <input type="submit" class="button" value="Sign Up">
                         </div>
-                        <div class="hr"></div>
+                        
+                    </div>
+
+                </div>
+              </form>
+              <div class="hr"></div>
                         <div class="foot-lnk">
                             <a href="#forgot">Signup</a>
                         </div>
                         <div class="foot-lnk">
                             <a href="#forgot">Forgot Password?</a>
                         </div>
-                    </div>
-
-                </div>
             </div>
+
+          
+
         </div>
     </section>
 
