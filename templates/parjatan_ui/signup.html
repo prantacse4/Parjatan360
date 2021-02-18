@@ -38,7 +38,7 @@ active
             <div class="login-html">
                 <label class="tab">SIGN UP AS</label>
 
-                <form method="POST">
+                <form method="POST" class="d-inline">
                   {% csrf_token %}
                 <select name="user_type">
                     <option value="member">Member</option>
@@ -47,6 +47,10 @@ active
                     <option value="resort_manager">Resort Manager</option>
                     <option value="blogger">Blogger</option>
                 </select>
+
+                <div class="diverror">
+                    <h5>hi</h5>
+                </div>
 
                 <div class="login-form">
                     <div class="sign-in-htm">
