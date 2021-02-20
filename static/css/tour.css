@@ -132,3 +132,36 @@
     padding: .4rem .4rem;
     text-align: center;
 }
+
+.descriptions p {
+    user-select: none;
+    padding: .2rem .4rem;
+    color: var(--gray-dark);
+    font-weight: 500;
+}
+.descriptions h5 {
+    font-weight: 700;
+    color: var(--btn);
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+    background: var(--btnhover);
+    padding: .4rem;
+    border-radius: .3rem;
+}
+.descriptions h6 {
+    font-weight: 600;
+    color: var(--bg);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+}
+.descriptions i {
+    color: var(--btn);
+}
+.add_to_wishlist {
+    text-align: center;
+    margin: 3rem;
+}
+.add_to_wishlist i {
+    color: crimson;
+}

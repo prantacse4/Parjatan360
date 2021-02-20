@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .models import User, UserProfileImage, member, resorts_manager, blogger, car_driver
+from .models import User, UserProfileImage, member, resorts_manager, blogger, car_driver, Tours, tour_arranger
 from .forms import UserProfileForm, memberSignUpForm, car_driverSignUpForm, resorts_managerSignUpForm, bloggerSignUpForm, tour_arrangerSignUpForm
 # from .decorators import student_required, teacher_required
 
@@ -186,6 +186,8 @@ def logout_user(request):
 
 
 
-def tour(request):
-    diction = {}
+def tour(request,id):
+    tour = Tours.objects.get(pk=id)
+    diction = {'tour':tour}
     return render(request, 'parjatan_ui/tour.html', context=diction)
+

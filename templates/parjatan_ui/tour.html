@@ -39,20 +39,18 @@ active
                         <div class="site_slider">
                             <div class="slider_one">
                                 <div class="slicks slick_s1">
-                                    <h1 class="text-center text-white pt-5">Hi,</h1>
+                                    <img src="{{ tour.slider_img1.url }}" alt="">
                                 </div>
                                 <div class="slicks slick_s2">
-                                    <h1 class="text-center text-white pt-5">This</h1>
+                                    <img src="{{ tour.slider_img2.url }}" alt="">
                                 </div>
                                 <div class="slicks slick_s3">
-                                    <h1 class="text-center text-white pt-5">is</h1>
+                                    <img src="{{ tour.slider_img3.url }}" alt="">
                                 </div>
                                 <div class="slicks slick_s4">
-                                    <h1 class="text-center text-white pt-5">Made By</h1>
+                                    <img src="{{ tour.slider_img4.url }}" alt="">
                                 </div>
-                                <div class="slicks slick_s5">
-                                    <h1 class="text-center text-white pt-5">PRANTA</h1>
-                                </div>
+                                
                             </div>
                             <div class="slider-btn">
                                 <span class="prev position-top"><i class="fas fa-chevron-left"></i></span>
@@ -77,7 +75,7 @@ active
                             <div class="row booking_details">
                                 <div class="col-md-4">
                                     <h5>Date</h5>
-                                    <p>16 Feb, 2021</p>
+                                    <p>{{tour.date}}</p>
                                 </div>
                                 <div class="col-md-4">
                                     <h5>Enter Members</h5>
@@ -85,36 +83,89 @@ active
                                 </div>
                                 <div class="col-md-4">
                                     <h5>Price per member</h5>
-                                    <p>৳4,500</p>
+                                    <p>৳{{tour.budget}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="descriptions">
+                    <div class="highlights">
+                        <h5>Highlights</h5>
+                        <p><i class="far fa-check-circle"></i> {{tour.highlight_1}}</p>
+                        <p><i class="far fa-check-circle"></i> {{tour.highlight_2}}</p>
+                        <p><i class="far fa-check-circle"></i> {{tour.highlight_3}}</p>
+                        <p><i class="far fa-check-circle"></i> {{tour.highlight_4}}</p>
+                        <p><i class="far fa-check-circle"></i> {{tour.highlight_5}}</p>
+                    </div>
+
+
+                        <h5>Tour Plan</h5>
+                        <p>{{ tour.tour_plan|linebreaks }}</p>
+
+
+                    <h5>What's Included</h5>
+
+                    <h6><i class="far fa-check-circle"></i> Accommodation </h6>
+                    <p>{{ tour.inc_accommodation|linebreaks }}</p>
+
+
+                    <h6><i class="far fa-check-circle"></i> Transportation </h6>
+                    <p>{{ tour.inc_transportation|linebreaks }}</p>
+
+
+                    <h6><i class="far fa-check-circle"></i> Meals</h6>
+                    <p>{{ tour.inc_meals|linebreaks }}</p>
+
+
+
+                    <h6><i class="far fa-check-circle"></i> Guide </h6>
+                    <p>{{ tour.inc_guid|linebreaks }}</p>
+
+                    <h6><i class="far fa-check-circle"></i> Additional Services</h6>
+                    <p>{{ tour.inc_additional|linebreaks }}</p>
+
+
+                    
+                    <h5>Contact</h5>
+                    <p><i class="far fa-check-circle"></i> Phone: {{ tour.tour_contact_phone }}</p>
+                    <p><i class="far fa-check-circle"></i> Email: {{ tour.tour_contact_email }}</p>
+
+
+                    <div class="add_to_wishlist">
+                        <button class="btn my_button"><i class="fas fa-heart"></i> Add to wishlist</button>
+                    </div>
+
+                </div>
+
+
+
+
             </div>
 
             <div class="col-md-4">
                 <div class="tour_header">
                     <div class="tour_heading">
-                        <h5>Sylhet to Coxbazar Tour</h5>
-                        <p><i class="fas fa-map-marker-alt text-success"></i> Cox's Bazar</p>
+                        <h5>{{tour.title}}</h5>
+                        <p><i class="fas fa-map-marker-alt text-success"></i> {{tour.location}}</p>
                     </div>
                     <div class="row tour_main_details">
                         <div class="col-md-6">
                             <h5>Tour Arranged By</h5>
-                            <p>Mr TOur</p>
+                            <p>{{tour.user.tour_arranger.name}}</p>
                             <h5>Budget</h5>
-                            <p>4,500 Per</p>
+                            <p>{{tour.budget}} Per</p>
                             <h5>Age Limit</h5>
-                            <p>18-40</p>
+                            <p>{{tour.age_limit}}</p>
                         </div>
                         <div class="col-md-6">
-                            <h5>Total Member Needed</h5>
-                            <p>25</p>
-                            <h5>Available Member Seats</h5>
-                            <p>14</p>
+                            <h5>Total Member</h5>
+                            <p>{{tour.total_memeber}}</p>
+                            <h5>Booked Seats</h5>
+                            <p>{{tour.booked_seat}}</p>
                             <h5>Tour Duration</h5>
-                            <p><i class="fas fa-sun text-warning"></i> 2 Days &nbsp; <i class="fas fa-moon text-info"></i>  3 Days</p>
+                            <p><i class="fas fa-sun text-warning"></i> {{tour.duration_days}} Days &nbsp; <i class="fas fa-moon text-info"></i>  {{tour.duration_nights}} Nights</p>
                         </div>
                     </div>
                 </div>
@@ -137,6 +188,7 @@ active
                     </div>
                 </div>
 
+               
 
             </div>
         </div>
