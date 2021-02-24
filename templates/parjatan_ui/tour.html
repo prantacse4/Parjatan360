@@ -38,18 +38,56 @@ active
                     <section class="slicksliderexample" id="slick_slider">
                         <div class="site_slider">
                             <div class="slider_one">
-                                <div class="slicks slick_s1">
-                                    <img src="{{ tour.slider_img1.url }}" alt="">
+
+                                
+   
+
+                                
+                                {% if tour.slider_img1 or tour_img2 or tour_img4 or tour_img4%}
+                                    <div class="slicks slick_s1">
+                                        <img src="{{ tour.slider_img1.url }}" alt="">
+                                    </div>
+
+                                    <div class="slicks slick_s2">
+                                        <img src="{{ tour.slider_img2.url }}" alt="">
+                                    </div>
+
+                                    <div class="slicks slick_s3">
+                                        <img src="{{ tour.slider_img3.url }}" alt="">
+                                    </div>
+
+                                    <div class="slicks slick_s4">
+                                        <img src="{{ tour.slider_img4.url }}" alt="">
+                                    </div>
+
+                                 {% else %}
+                                 <div class="slicks slick_s1">
+                                    <img src="{% static 'img/image.jpg' %}" alt="">
                                 </div>
                                 <div class="slicks slick_s2">
-                                    <img src="{{ tour.slider_img2.url }}" alt="">
+                                    <img src="{% static 'img/image.jpg' %}" alt="">
                                 </div>
+
                                 <div class="slicks slick_s3">
-                                    <img src="{{ tour.slider_img3.url }}" alt="">
+                                    <img src="{% static 'img/image.jpg' %}" alt="">
                                 </div>
                                 <div class="slicks slick_s4">
-                                    <img src="{{ tour.slider_img4.url }}" alt="">
+                                    <img src="{% static 'img/image.jpg' %}" alt="">
                                 </div>
+                                {% endif %}
+                                    
+                                   
+                                <!-- {% if tour.slider_img2 %}
+                                <div class="slicks slick_s1">
+                                    <img src="{{ tour.slider_img2.url }}" alt="">
+                                </div>
+                             {% else %}   
+                             <div class="slicks slick_s1">
+                                <img src="{% static 'img/image.jpg' %}" alt="">
+                            </div>
+                            {% endif %} -->
+                                    
+                                
                                 
                             </div>
                             <div class="slider-btn">

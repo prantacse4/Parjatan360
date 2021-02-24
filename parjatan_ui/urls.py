@@ -9,5 +9,4 @@ urlpatterns = [
     path('logout/',views.logout_user, name="logout_user"),
     path('tour/<int:id>/', views.tour, name="tour"),
 
-
 ]
