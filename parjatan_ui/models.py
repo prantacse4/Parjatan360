@@ -85,6 +85,7 @@ class Tours(models.Model):
     highlight_4 = models.CharField(max_length=150)
     highlight_5 = models.CharField(max_length=150)
     tour_plan = models.TextField()
+    promo_text = models.TextField()
     inc_accommodation = models.TextField()
     inc_transportation = models.TextField()
     inc_meals = models.TextField()

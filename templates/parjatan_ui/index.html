@@ -93,20 +93,33 @@ active
 
       <div class="row">
 
-        <div class="col-md-6">
-          <div class="card card1">
-            <a href="#">
-            <div class="image_card_div">
-              <img src="{% static 'img/image.jpg' %}" alt="">
+        
+        {% for packages in packages %}
+          <div class="col-md-6">
+            <div class="card card1">
+              <a href="#">
+              <div class="image_card_div">
+                
+                {% if packages.slider_img1 %}
+                  <img src="{{ packages.slider_img1.url }}" alt="">
+                {% else %}
+                  <img src="{% static 'img/image.jpg' %}" alt="">
+                {% endif %}
+                  
+              </div>
+              <div class="card_header">
+                <h5><i class="fas fa-place-of-worship"></i> {{packages.title}}</h5>
+                <p>{{ packages.promo_text|truncatechars:200 }}</p>
+                <h6><i class="fas fa-star-half-alt"></i> {{packages.total_memeber}} Seats</h6>
+              </div>
+            </a>
             </div>
-            <div class="card_header">
-              <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
-              <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
-              <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
-            </div>
-          </a>
-          </div>
-      </div>
+        </div>
+
+        {% endfor %}
+          
+
+        
 
       <div class="col-md-6">
         <div class="card card1">

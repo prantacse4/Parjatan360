@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .models import User, UserProfileImage, member, resorts_manager, blogger, car_driver, Tours, tour_arranger
+from .models import User, UserProfileImage, member, resorts_manager, blogger, car_driver, Tours, tour_arranger, Tours
 from .forms import UserProfileForm, memberSignUpForm, car_driverSignUpForm, resorts_managerSignUpForm, bloggerSignUpForm, tour_arrangerSignUpForm
 # from .decorators import student_required, teacher_required
 
@@ -15,7 +15,8 @@ from .forms import UserProfileForm, memberSignUpForm, car_driverSignUpForm, reso
 
 
 def parjatan_ui(request):
-    diction = {}
+    packages = Tours.objects.all().order_by("id")[:6]
+    diction = {'packages':packages}
     return render(request, 'parjatan_ui/index.html', context = diction)
 
 
