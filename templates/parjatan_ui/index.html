@@ -82,7 +82,7 @@ active
 </div>
 
 
-
+{% if packages %}
 <section class="most_visited_section">
   <div class="container">
     <div class="most_visited">
@@ -91,13 +91,15 @@ active
         <h5>Most Visited Spots</h5>
       </div>
 
+      
+
       <div class="row">
 
         
         {% for packages in packages %}
           <div class="col-md-6">
             <div class="card card1">
-              <a href="#">
+              <a href="{% url 'tour' packages.id %}">
               <div class="image_card_div">
                 
                 {% if packages.slider_img1 %}
@@ -109,8 +111,8 @@ active
               </div>
               <div class="card_header">
                 <h5><i class="fas fa-place-of-worship"></i> {{packages.title}}</h5>
-                <p>{{ packages.promo_text|truncatechars:200 }}</p>
-                <h6><i class="fas fa-star-half-alt"></i> {{packages.total_memeber}} Seats</h6>
+                <p>{{ packages.promo_text|truncatechars:250 }}</p>
+                <h6><i class="fas fa-star-half-alt"></i> Seats: {{packages.total_memeber}}   &nbsp; &nbsp;<i class="fas fa-star"></i> Booked:{{packages.booked_seat}} </h6>
               </div>
             </a>
             </div>
@@ -119,55 +121,9 @@ active
         {% endfor %}
           
 
-        
-
-      <div class="col-md-6">
-        <div class="card card1">
-          <a href="#">
-          <div class="image_card_div">
-            <img src="{% static 'img/image.jpg' %}" alt="">
-          </div>
-          <div class="card_header">
-            <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
-            <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
-            <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
-          </div>
-        </a>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card card1">
-        <a href="#">
-        <div class="image_card_div">
-          <img src="{% static 'img/image.jpg' %}" alt="">
-        </div>
-        <div class="card_header">
-          <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
-          <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
-          <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
-        </div>
-      </a>
-      </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card card1">
-      <a href="#">
-      <div class="image_card_div">
-        <img src="{% static 'img/image.jpg' %}" alt="">
-      </div>
-      <div class="card_header">
-        <h5><i class="fas fa-place-of-worship"></i> Barishal</h5>
-        <p>Barisal, is a major city that lies on the banks of the Kirtankhola river in south-central Bangladesh. It is the largest city and the administrative headquarter of both Barishal District and Barisal Division. It is one of the oldest municipalities and river ports of the country.</p>
-        <h6><i class="fas fa-star-half-alt"></i> 28 Packages</h6>
-      </div>
-    </a>
-    </div>
-</div>
-
 
     </div>
+    
 
     <div class="big_button">
       <a href="#">All Packages</a>
@@ -175,7 +131,7 @@ active
     
   </div>
 </section>
-
+{% endif %}
 
 <section class="top_rated_resorts">
   <div class="container">
